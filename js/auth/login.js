@@ -1,5 +1,10 @@
-// Skip login untuk single player
-export async function login(username, password){
-  console.log("Single Player Mode: login skipped");
-  return {token:"SP_MODE"};
+export function initLogin(onStart) {
+  const btn = document.getElementById("loginBtn");
+  if (!btn) return;
+
+  btn.onclick = () => {
+    document.getElementById("loginScreen").style.display = "none";
+    document.getElementById("gameScreen").style.display = "block";
+    onStart();
+  };
 }
