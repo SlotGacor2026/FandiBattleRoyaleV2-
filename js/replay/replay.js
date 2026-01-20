@@ -1,3 +1,3 @@
-export function playReplay(matchId){
-  console.log(`Playing replay ${matchId}`)
+export class Replay {
+  play() {}
 }
