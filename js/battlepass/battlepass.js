@@ -1,3 +1,3 @@
-export function getBattlePassProgress(){
-  console.log("Get battlepass progress")
+export class BattlePass {
+  addXP(xp) {}
 }
