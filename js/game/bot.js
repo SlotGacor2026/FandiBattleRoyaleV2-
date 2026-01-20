@@ -1,29 +1,26 @@
-import { player } from "./player.js";
+import { Player } from "./player.js"
 
-export const bots = [];
+export class Bot {
+  constructor(x, y) {
+    this.x = x
+    this.y = y
+    this.hp = 50
+    this.speed = 1.2
+    this.damage = 0.2
+  }
 
-export function spawnBot(x, y) {
-  bots.push({
-    x,
-    y,
-    hp: 50,
-    speed: 1.2
-  });
+  update(player) {
+    const dx = player.x - this.x
+    const dy = player.y - this.y
+    const dist = Math.hypot(dx, dy) || 1
+
+    // kejar player
+    this.x += (dx / dist) * this.speed
+    this.y += (dy / dist) * this.speed
+
+    // serang kalau dekat
+    if (dist < 30) {
+      player.takeDamage(this.damage)
+    }
+  }
 }
-
-export function updateBots() {
-  bots.forEach(bot => {
-    const dx = player.x - bot.x;
-    const dy = player.y - bot.y;
-    const dist = Math.hypot(dx, dy);
-
-    if (dist > 5) {
-      bot.x += (dx / dist) * bot.speed;
-      bot.y += (dy / dist) * bot.speed;
-    }
-
-    if (dist < 40) {
-      player.hp -= 0.1; // bot nembak
-    }
-  });
-        }
