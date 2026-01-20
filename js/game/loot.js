@@ -1,3 +1,6 @@
-export function pickLoot(player, item){
-  console.log(`${player.name} picked up ${item.name}`)
+export class Loot {
+  constructor(type, value) {
+    this.type = type
+    this.value = value
+  }
 }
