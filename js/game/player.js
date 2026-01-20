@@ -1,7 +1,12 @@
-export const player = {
-  x: 400,
-  y: 300,
-  hp: 100,
-  size: 32,
-  speed: 3
-};
+import { Weapon } from "./weapon.js"
+
+export class Player {
+  constructor() {
+    this.hp = 100
+    this.weapon = new Weapon("Rifle", 10)
+  }
+
+  takeDamage(dmg) {
+    this.hp -= dmg
+  }
+}
