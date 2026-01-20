@@ -1,4 +1,5 @@
-export function updateProfileUI(profile) {
-  document.getElementById("username").innerText = profile.username
-  document.getElementById("level").innerText = profile.level
+import { profile } from "./profile.js";
+
+export function renderProfile() {
+  console.log("Profile:", profile.username);
 }
