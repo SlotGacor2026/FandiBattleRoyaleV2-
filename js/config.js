@@ -1,5 +1,6 @@
 export const CONFIG = {
-  API_URL: "",    // kosong karena tidak ada server nyata
-  SOCKET_URL: "", // kosong karena tidak ada socket
-  JWT_SECRET: ""
+  GAME_NAME: "FandiBattleRoyaleV2",
+  WIDTH: 800,
+  HEIGHT: 500,
+  BOT_COUNT: 5
 }
