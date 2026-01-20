@@ -1,3 +1,3 @@
-export function getCurrentEvents(){
-  console.log("Fetch current events")
+export class GameEvent {
+  start() {}
 }
