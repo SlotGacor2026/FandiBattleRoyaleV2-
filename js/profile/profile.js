@@ -1,8 +1,9 @@
-import { CONFIG } from "../config.js"
+export const profile = {
+  username: "Guest",
+  level: 1,
+  exp: 0
+};
 
-export async function getProfile() {
-  const res = await fetch(`${CONFIG.API_URL}/profile`, {
-    headers: { Authorization: localStorage.getItem("token") }
-  })
-  return await res.json()
-    }
+export function addExp(xp) {
+  profile.exp += xp;
+}
