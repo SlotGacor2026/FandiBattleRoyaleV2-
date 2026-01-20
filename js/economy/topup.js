@@ -1,3 +1,7 @@
-export async function topupDiamond(uid, amount){
-  console.log(`Topup ${amount} diamond for user ${uid}`)
+import { Wallet } from "./wallet.js"
+
+export class Topup {
+  addDiamond(wallet, n) {
+    wallet.diamond += n
+  }
 }
