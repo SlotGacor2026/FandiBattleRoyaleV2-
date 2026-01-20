@@ -1,3 +1,3 @@
-export class HUD {
-  update() {}
+export function initHUD() {
+  console.log("HUD AKTIF")
 }
