@@ -1,3 +1,3 @@
-export function previewSkin(skin){
-  console.log(`Preview skin ${skin.name}`)
+export class SkinPreview {
+  show() {}
 }
