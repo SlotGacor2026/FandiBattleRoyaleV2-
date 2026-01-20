@@ -1,3 +1,3 @@
-export function createClan(name){
-  console.log(`Clan created: ${name}`)
+export class Clan {
+  create(name) {}
 }
