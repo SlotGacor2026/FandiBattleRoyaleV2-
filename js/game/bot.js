@@ -1,26 +1,20 @@
-import { Player } from "./player.js"
-
 export class Bot {
-  constructor(x, y) {
+  constructor(id, x, y) {
+    this.id = id
     this.x = x
     this.y = y
-    this.hp = 50
-    this.speed = 1.2
-    this.damage = 0.2
+    this.hp = 100
   }
 
-  update(player) {
-    const dx = player.x - this.x
-    const dy = player.y - this.y
-    const dist = Math.hypot(dx, dy) || 1
+  move() {
+    this.x += Math.random() * 4 - 2
+    this.y += Math.random() * 4 - 2
+  }
 
-    // kejar player
-    this.x += (dx / dist) * this.speed
-    this.y += (dy / dist) * this.speed
-
-    // serang kalau dekat
-    if (dist < 30) {
-      player.takeDamage(this.damage)
+  takeDamage(dmg) {
+    this.hp -= dmg
+    if (this.hp <= 0) {
+      console.log("BOT MATI:", this.id)
     }
   }
 }
