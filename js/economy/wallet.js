@@ -1,2 +1,10 @@
-export function addCoin(player, amount){ player.coin += amount }
-export function addDiamond(player, amount){ player.diamond += amount }
+export class Wallet {
+  constructor() {
+    this.coin = 0
+    this.diamond = 0
+  }
+
+  addCoin(n) {
+    this.coin += n
+  }
+}
