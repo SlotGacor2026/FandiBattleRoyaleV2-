@@ -1,3 +1,9 @@
-export function damageZone(player, damagePerSec){
-  setInterval(()=>player.takeDamage(damagePerSec),1000)
+export class Zone {
+  constructor(radius) {
+    this.radius = radius
+  }
+
+  shrink() {
+    this.radius -= 1
+  }
 }
