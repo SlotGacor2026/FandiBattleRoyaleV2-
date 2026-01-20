@@ -1,9 +1,6 @@
-export const profile = {
-  username: "Guest",
-  level: 1,
-  exp: 0
-};
-
-export function addExp(xp) {
-  profile.exp += xp;
+export class Profile {
+  constructor(name) {
+    this.name = name
+    this.level = 1
+  }
 }
