@@ -1,31 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FandiBattleRoyaleV2 - Single Player</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>FandiBattleRoyaleV2</title>
 </head>
-<body>
-  <!-- LOGIN SCREEN -->
-  <div id="loginScreen">
-    <h1>FandiBattleRoyaleV2</h1>
-    <button id="loginBtn">Start Single Player</button>
-  </div>
+<body style="margin:0;background:#111;display:flex;justify-content:center;align-items:center;height:100vh;">
+  <canvas id="game"></canvas>
 
-  <!-- GAME SCREEN -->
-  <div id="gameScreen" style="display:none;">
-    <div id="hud">
-      <span id="health">HP: 100</span> |
-      <span id="coin">Coin: 0</span> |
-      <span id="diamond">Diamond: 0</span> |
-      <span id="inventory">Inventory: Empty</span>
-    </div>
-    <canvas id="gameCanvas" width="800" height="600"></canvas>
-  </div>
-
-  <script type="module" src="js/config.js"></script>
-  <script type="module" src="js/auth/login.js"></script>
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="./js/main.js"></script>
 </body>
-  </html>
+</html>
