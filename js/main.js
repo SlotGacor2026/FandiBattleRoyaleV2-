@@ -1,3 +1,4 @@
+alert("MAIN.JS JALAN");
 /* ================= CONFIG ================= */
 import { CONFIG } from "./config.js"
 
