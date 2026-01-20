@@ -1,5 +1,7 @@
-import { profile } from "./profile.js";
+import { Profile } from "./profile.js"
 
-export function renderProfile() {
-  console.log("Profile:", profile.username);
+export class ProfileUI {
+  render(profile) {
+    console.log(profile.name)
+  }
 }
