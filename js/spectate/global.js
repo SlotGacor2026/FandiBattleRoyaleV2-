@@ -1,3 +1,3 @@
-export function spectate(player){
-  console.log(`Spectating ${player.name}`)
+export class Spectate {
+  watch() {}
 }
