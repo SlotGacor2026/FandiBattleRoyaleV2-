@@ -1,3 +1,5 @@
-export function initSocket() {
-  console.log("Socket: single player mode");
+export class GameSocket {
+  connect() {
+    console.log("Offline mode")
+  }
 }
